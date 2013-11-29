@@ -6,6 +6,7 @@ Auto archive Joomla Articles
 <b>How to use :</b><br />
 Simply install the plugin from the archive file and enable it.<br />
 Configure the number of days that you want to archive from.<br />
+Choose the category (or choose all to archive all articles).<br /> 
 
 <b>Example :</b><br /> 
 Set 30 as number of days to archives all articles in the past except the last 30 days.
