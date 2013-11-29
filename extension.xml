@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+	<update>
+		<name>Auto Archive</name>
+		<version>1.0.0</version>
+		<infourl title="Messi89"><![CDATA[https://twitter.com/messi89minou]]></infourl>
+		<downloads>
+			<downloadurl type="full" format="zip"><![CDATA[https://github.com/messi89/AutoArchive]]></downloadurl>
+		</downloads>
+		<targetplatform name="joomla" version="2.5"/>
+		<element>autoarchive</element>
+		<type>plugin</type>
+		<folder>system</folder>
+	</update>
+</updates>

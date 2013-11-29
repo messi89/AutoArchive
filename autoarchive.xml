@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="system">
+	<name>AutoArchive</name>
+	<author>Messi89 - OverGen</author>
+	<creationDate>November 2013</creationDate>
+	<copyright>Copyright (C) 2013 Messi89 - OverGen. All
+		rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt
+	</license>
+	<authorEmail>contact@overgen.com</authorEmail>
+	<authorUrl>https://twitter.com/messi89minou</authorUrl>
+	<version>1.0.0</version>
+	<description>Automatically archive articles by Messi89 OverGen</description>
+	<updateservers>
+	   	<server type="plugin" priority="1" name="AutoArchive"><![CDATA[https://raw.github.com/Messi89/AutoArchive/master/extension.xml]]></server>
+	</updateservers>
+	<files>
+		<filename plugin="autoarchive">autoarchive.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="days" type="text" default="30"
+					description="Set 30 as number of days to archives all articles in the past except the last 30 days" label="Number of days to keep" />				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
