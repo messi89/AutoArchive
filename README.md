@@ -2,7 +2,7 @@ Auto archive Joomla Articles
 ==========
 
 Auto archive Joomla Articles based on a configurable number of days.<br /> 
-How to use :<br />
+<b>How to use :</b><br />
 Simply install the plugin from the archive file and enable it.<br />
 Configure the number of days that you want to archive from.<br />
 
