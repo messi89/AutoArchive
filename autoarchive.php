@@ -19,6 +19,12 @@ class plgSystemAutoarchive extends JPlugin {
 	 * @var int The number of days age to archive
 	 */
 	private $_days;
+
+	/**
+	 * @access private
+	 * @var int The ID of category to archive
+	 */
+	private $_catID;
 	
 	/**
 	 * Constructor
@@ -35,6 +41,7 @@ class plgSystemAutoarchive extends JPlugin {
 		
 		// Get our current configuration
 		$this->_days = $this->params->get ( 'days', 30 );
+		$this->_catID = $this->params->get ( 'catID', 0);
 	}
 	
 	/**
@@ -51,14 +58,32 @@ class plgSystemAutoarchive extends JPlugin {
 		if ($app->isAdmin () || JDEBUG) {
 			return;
 		}
+
+		//debug variables, must disable first if
+		/*if(JDEBUG){
+			var_dump($this->_catID) or die();
+		}*/
 		
 		// How many days back was this date?
 		$date = date ( 'Y-m-d', strtotime ( $this->_days . ' days ago', time () ) );
 		
+		//choose a category
+		$catID= $this->_catID;
+
 		// construct the sql 
-		$query = "UPDATE #__content SET state = '2' ";
-		$query .= " WHERE publish_up <= '" . $date . "' ";
-		$query .= " OR (publish_down <> '0000-00-00 00:00:00' AND publish_down <= '" . date ( 'Y-m-d' ) . "' AND state <> '2')";
+		if ($catID == 0) { 
+			//archive all categories
+			$query = "UPDATE #__content SET state = '2' ";
+			$query .= " WHERE publish_up <= '" . $date . "' ";
+			$query .= " OR (publish_down <> '0000-00-00 00:00:00' AND publish_down <= '" . date ( 'Y-m-d' ) . "' AND state <> '2')";
+		}
+		else { 
+			//archive selected category
+			$query = "UPDATE #__content SET state = '2' ";
+			$query .= " WHERE (publish_up <= '" . $date . "' AND catid ='".$catID."')";
+			$query .= " OR (publish_down <> '0000-00-00 00:00:00' AND publish_down <= '" . date ( 'Y-m-d' ) . "' AND state <> '2' AND catid ='".$catID."')";
+		}
+		
 		
 		// Run the sql
 		$db = JFactory::getDBO ();

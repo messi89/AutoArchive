@@ -18,9 +18,29 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="days" type="text" default="30"
-					description="Set 30 as number of days to archives all articles in the past except the last 30 days" label="Number of days to keep" />				
-			</fieldset>
+				<field 
+					name="days" 
+					type="text" 
+					default="30" 
+					description="Set 30 as number of days to archives all articles in the past except the last 30 days" 
+					label="Number of days to keep" 
+					required="true" >
+				</field>	
+				<field
+                    name="catID"
+                    type="category"
+                    label="JCATEGORY"
+                    extension="com_content"
+                    multiple="false"
+                    default=""
+                    description="Set the Category ID, if not set all articles will be archived" 
+                    required="true" >
+                    <option value="0">JOPTION_ALL_CATEGORIES</option>
+                </field>
+			</fieldset>			
 		</fields>
 	</config>
+	<layout title="Offers">
+         <message>This is a component in order to display offers</message>
+    </layout>
 </extension>
