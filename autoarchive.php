@@ -71,15 +71,15 @@ class plgSystemAutoarchive extends JPlugin {
 		$catID= $this->_catID;
 
 		// construct the sql 
+		$query = "UPDATE #__content SET state = '2' ";
+
 		if ($catID == 0) { 
 			//archive all categories
-			$query = "UPDATE #__content SET state = '2' ";
 			$query .= " WHERE publish_up <= '" . $date . "' ";
 			$query .= " OR (publish_down <> '0000-00-00 00:00:00' AND publish_down <= '" . date ( 'Y-m-d' ) . "' AND state <> '2')";
 		}
 		else { 
 			//archive selected category
-			$query = "UPDATE #__content SET state = '2' ";
 			$query .= " WHERE (publish_up <= '" . $date . "' AND catid ='".$catID."')";
 			$query .= " OR (publish_down <> '0000-00-00 00:00:00' AND publish_down <= '" . date ( 'Y-m-d' ) . "' AND state <> '2' AND catid ='".$catID."')";
 		}
