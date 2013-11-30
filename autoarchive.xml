@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.7" type="plugin" group="system">
+<extension version="2.5" type="plugin" group="system">
 	<name>AutoArchive</name>
 	<author>Messi89 - OverGen</author>
 	<creationDate>November 2013</creationDate>
-	<copyright>Copyright (C) 2013 Messi89 - OverGen. All rights reserved.</copyright>
+	<copyright>© 2013 Messi89 OverGen. All rights reserved.</copyright>
 	<authorEmail>contact@overgen.com</authorEmail>
 	<authorUrl>https://twitter.com/messi89minou</authorUrl>
 	<version>1.0.0</version>
-	<description>Automatically archive articles by Messi89 OverGen</description>
+	<description><![CDATA[<p>Automatically archive articles for Joomla 2.5.x</p><p><i>Auto archive Joomla content based on a configurable number of days. You can also filter archived articles by category.</i></p>Follow me on : Twitter <a href="https://twitter.com/messi89minou" target="_blank">@Messi89Minou</a> | Git <a href="https://github.com/messi89/" target="_blank">Messi89 Git</a><br><br>© 2013 Messi89 OverGen. All rights reserved.]]></description>
 	<updateservers>
 	   	<server type="plugin" priority="1" name="AutoArchive"><![CDATA[https://raw.github.com/messi89/AutoArchive/master/extension.xml]]></server>
 	</updateservers>
@@ -40,7 +40,4 @@
 			</fieldset>			
 		</fields>
 	</config>
-	<layout title="Offers">
-         <message>This is a component in order to display offers</message>
-    </layout>
 </extension>
