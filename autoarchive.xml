@@ -7,7 +7,7 @@
 	<authorEmail>contact@overgen.com</authorEmail>
 	<authorUrl>https://twitter.com/messi89minou</authorUrl>
 	<version>1.0.0</version>
-	<description><![CDATA[<p>Automatically archive articles for Joomla 2.5.x</p><p><i>Auto archive Joomla content based on a configurable number of days. You can also filter archived articles by category.</i></p>Follow me on : Twitter <a href="https://twitter.com/messi89minou" target="_blank">@Messi89Minou</a> | Git <a href="https://github.com/messi89/" target="_blank">Messi89 Git</a><br><br>© 2013 Messi89 OverGen. All rights reserved.]]></description>
+	<description><![CDATA[<p>Automatically archive articles for Joomla 2.5.x</p><p><i>Auto archive Joomla content based on a configurable number of days. You can also filter archived articles by category.</i></p><p>Follow me on : Twitter <a href="https://twitter.com/messi89minou" target="_blank">@Messi89Minou</a> | Git <a href="https://github.com/messi89/" target="_blank">Messi89 Git</a></p><p>© 2013 Messi89 OverGen. All rights reserved.</p>]]></description>
 	<updateservers>
 	   	<server type="plugin" priority="1" name="AutoArchive"><![CDATA[https://raw.github.com/messi89/AutoArchive/master/extension.xml]]></server>
 	</updateservers>
