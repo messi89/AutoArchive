@@ -67,7 +67,7 @@ class plgSystemAutoarchive extends JPlugin {
 		// How many days back was this date?
 		$date = date ( 'Y-m-d', strtotime ( $this->_days . ' days ago', time () ) );
 		
-		//choose a category
+		//store a selected category
 		$catID= $this->_catID;
 
 		// construct the sql 
